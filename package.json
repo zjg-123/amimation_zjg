@@ -1,0 +1,23 @@
+{
+  "name": "ami",
+  "version": "1.0.0",
+  "description": "周佳钢测试npm",
+  "main": "./src/index.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zjg-123/amimation_zjg.git"
+  },
+  "keywords": [
+    "scss",
+    "css"
+  ],
+  "author": "zjg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zjg-123/amimation_zjg/issues"
+  },
+  "homepage": "https://github.com/zjg-123/amimation_zjg#readme"
+}

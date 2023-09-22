@@ -1,0 +1,268 @@
+.main-pd-10-15{
+  padding: 10px 15px;
+  box-sizing: border-box;
+}
+// 滚动条样式
+%scroll{
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 8px;
+    border-radius: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: hsl(225, 3%, 69%);
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  &::-webkit-resizer {
+    background: transparent
+  }
+
+  &::-webkit-resizer {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+}
+// 滚动条样式
+%scrollBlue{
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 10px;
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #409eff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  &::-webkit-resizer {
+    background: transparent
+  }
+
+  &::-webkit-resizer {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+}
+%flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.flex-1{
+  flex:1;
+}
+.flex-row {
+  @extend %flex-row;
+}
+
+.flex-column-center {
+  @extend %flex-row;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flex-row-center {
+  @extend %flex-row;
+  justify-content: center;
+}
+
+.flex-row-wrap {
+  @extend %flex-row;
+  flex-wrap: wrap;
+}
+
+.flex-row-space-around {
+  @extend %flex-row;
+  justify-content: space-around;
+}
+
+.flex-row-space-between {
+  @extend %flex-row;
+  justify-content: space-between;
+}
+
+.flex-row-justify-start {
+  @extend %flex-row;
+  justify-content: flex-start;
+}
+
+.flex-row-justify-end {
+  @extend %flex-row;
+  justify-content: flex-end;
+}
+
+.flex-row-align-start {
+  @extend %flex-row;
+  align-items: flex-start;
+}
+
+.flex-row-align-center {
+  @extend %flex-row;
+  align-items: center;
+}
+
+.flex-row-align-end {
+  @extend %flex-row;
+  align-items: flex-end;
+}
+
+.flex-row-align-baseline {
+  @extend %flex-row;
+  align-items: baseline;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.block-left {
+  display: block;
+  margin-right: auto;
+}
+
+.block-center {
+  display: block;
+  margin: 0 auto;
+}
+
+.block-right {
+  display: block;
+  margin-left: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #E3E3E3;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+@mixin text-line($i) {
+  word-break: break-all;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $i;
+  line-clamp: $i;
+  -webkit-box-orient: vertical;
+}
+
+@for $i from 1 to 5 {
+  .text-line-#{$i} {
+    @include text-line($i);
+  }
+
+  .f-#{$i*2+10} {
+    font-size:#{$i*2+10}px;
+  }
+
+  .f-#{$i*2+11} {
+    font-size:#{$i*2+11}px;
+  }
+}
+
+@for $i from 1 to 120 {
+  .h-#{$i} {
+    height:#{$i}px !important;
+    ;
+  }
+
+  .lh-#{$i} {
+    line-height:#{$i}px !important;
+    ;
+  }
+
+  .h-min-#{$i} {
+    min-height:#{$i}px !important;
+    ;
+  }
+
+  .w-#{$i} {
+    width:#{$i}px !important;
+  }
+
+  .m-g-t-#{$i} {
+    margin-top:#{$i}px;
+  }
+
+  .m-g-b-#{$i} {
+    margin-bottom:#{$i}px;
+  }
+
+  .m-g-l-#{$i} {
+    margin-left:#{$i}px;
+  }
+
+  .m-g-r-#{$i} {
+    margin-right:#{$i}px;
+  }
+
+  .p-d-t-#{$i} {
+    padding-top:#{$i}px;
+  }
+
+  .p-d-b-#{$i} {
+    padding-bottom:#{$i}px;
+  }
+
+  .p-d-l-#{$i} {
+    padding-left:#{$i}px;
+  }
+
+  .p-d-r-#{$i} {
+    padding-right:#{$i}px;
+  }
+}
+
+.el-cascader__suggestion-panel {
+  min-height: 46px;
+}
+
+
+.clear::after {
+  content: '.';
+  height: 0;
+  display: block;
+  clear: both;
+}
